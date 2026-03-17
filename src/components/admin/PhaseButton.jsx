@@ -13,7 +13,7 @@ export default function PhaseSwitcherButton() {
     const token = localStorage.getItem("token");
     if (!token) throw new Error("Aucun token. Veuillez vous reconnecter.");
 
-    const res = await axios.post('http://localhost:3000/phase/promote', {
+    const res = await axios.post('https://prefertile-intergradational-elane.ngrok-free.dev/phase/promote', {
       edition_year: contestStatus?.currentEdition,
     }, {
       headers: { Authorization: `Bearer ${token}` }
@@ -37,7 +37,7 @@ const demoteMutation = useMutation({
     const token = localStorage.getItem("token");
     if (!token) throw new Error("Aucun token. Veuillez vous reconnecter.");
 
-    const res = await axios.post('http://localhost:3000/phase/revert', {
+    const res = await axios.post('https://prefertile-intergradational-elane.ngrok-free.dev/phase/revert', {
       edition_year: contestStatus?.currentEdition,
     }, {
       headers: { Authorization: `Bearer ${token}` }

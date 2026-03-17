@@ -329,8 +329,8 @@ function Videos() {
                                     title={video.title}
                                     customThumbnail={
                                       video.thumbnail
-                                        ? `http://localhost:3000/uploads/images/${video.thumbnail}`
-                                        : "http://localhost:3000/uploads/images/thumbnail-placeholder.png"
+                                        ? `https://prefertile-intergradational-elane.ngrok-free.dev/uploads/images/${video.thumbnail}`
+                                        : "https://prefertile-intergradational-elane.ngrok-free.dev/uploads/images/thumbnail-placeholder.png"
                                     }
                                     defaultExpanded={false}
                                     className="mb-4"

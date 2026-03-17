@@ -16,7 +16,7 @@ i18n
             escapeValue: false,
         },
         backend:{
-           loadPath: "http://localhost:3000/translations/{{lng}}",
+           loadPath: "https://prefertile-intergradational-elane.ngrok-free.dev/translations/{{lng}}",
             requestOptions: {
                 headers:{
                     Authorization: `Bearer ${localStorage.getItem("token")}`,

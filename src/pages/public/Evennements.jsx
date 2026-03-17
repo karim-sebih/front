@@ -15,7 +15,7 @@ function Evennements() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/events")
+    fetch("https://prefertile-intergradational-elane.ngrok-free.dev/events")
       .then((res) => {
         if (!res.ok) throw new Error("loading error");
         return res.json();

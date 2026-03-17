@@ -16,7 +16,7 @@ import { useNavigate } from "react-router";
     const [event, setEvent] = useState(null);
 
 useEffect(() => {
-  fetch("http://localhost:3000/events")
+  fetch("https://prefertile-intergradational-elane.ngrok-free.dev/events")
     .then(res => res.json())
     .then(data => {
       const selectedEvent = data.find(e => e.id == id);

@@ -2,7 +2,7 @@ export const getRecentUploads = async (userId) => {
   const token = localStorage.getItem("token");
   if (!token || !userId) throw new Error("Non connecté ou ID manquant");
 
-  const response = await fetch(`http://localhost:3000/profile/${userId}/recent`, {
+  const response = await fetch(`https://prefertile-intergradational-elane.ngrok-free.dev/profile/${userId}/recent`, {
     headers: {
       Authorization: `Bearer ${token}`,
     },

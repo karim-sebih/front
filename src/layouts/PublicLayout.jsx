@@ -19,7 +19,7 @@ const handleNewsletter = async () => {
   }
 
   try {
-    const res = await fetch("http://localhost:3000/newsletter", {
+    const res = await fetch("https://prefertile-intergradational-elane.ngrok-free.dev/newsletter", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

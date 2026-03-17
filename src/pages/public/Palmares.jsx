@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect, useState } from "react";
 import { fetchAwards } from "../../api/awards";
 
-const UPLOADS_BASE = "https://prefertile-intergradational-elane.ngrok-free.dev/";
+const UPLOADS_BASE = "http://localhost:3000/";
 
 export default function Palmares() {
   const { t } = useTranslation();

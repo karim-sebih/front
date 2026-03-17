@@ -10,7 +10,7 @@ export function ContestProvider({ children }) {
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const res = await axios.get('https://prefertile-intergradational-elane.ngrok-free.dev/phase/status');
+        const res = await axios.get('http://localhost:3000/phase/status');
         setContestStatus(res.data);
       } catch (err) {
         console.error("Erreur récupération état concours", err);

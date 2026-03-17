@@ -214,7 +214,7 @@ const [toastVisible, setToastVisible] = useState(false);
       if (tempData.image_3) formData.append("image_3", tempData.image_3);
       formData.append("video", tempData.video);
 
-      const response = await fetch("https://prefertile-intergradational-elane.ngrok-free.dev/uploads", {
+      const response = await fetch("http://localhost:3000/uploads", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,

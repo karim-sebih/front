@@ -29,7 +29,7 @@ export default function Gallerie() {
     keepPreviousData: true,
   });
 
-  const UPLOADS_BASE = "https://prefertile-intergradational-elane.ngrok-free.dev/";
+  const UPLOADS_BASE = "http://localhost:3000/";
 
   const toFilmCardShape = (video) => {
     const thumb = video?.thumbnail

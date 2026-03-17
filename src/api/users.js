@@ -2,33 +2,33 @@ import instance from "./config.js";
 
 async function getUsers() {
   return await instance.get("users");
-  // https://prefertile-intergradational-elane.ngrok-free.dev/users; fetch method GET
+  // http://localhost:3000/users; fetch method GET
 }
 
 async function createUser(newUser) {
   return await instance.post("users", newUser);
-  // https://prefertile-intergradational-elane.ngrok-free.dev/users; fetch method POST
+  // http://localhost:3000/users; fetch method POST
 }
 
 
 async function updateUser(id, updatedUser) {
   return await instance.put(`users/${id}`, updatedUser);
-  // https://prefertile-intergradational-elane.ngrok-free.dev/users/1; fetch method PUT
+  // http://localhost:3000/users/1; fetch method PUT
 }
 
 async function deleteUser(id) {
   return await instance.delete(`users/${id}`);
-  // https://prefertile-intergradational-elane.ngrok-free.dev/users/1; fetch method DELETE
+  // http://localhost:3000/users/1; fetch method DELETE
 }
 
 async function getUserById(id) {
   return await instance.get(`users/${id}`);
-  // https://prefertile-intergradational-elane.ngrok-free.dev/users/1; fetch method GET
+  // http://localhost:3000/users/1; fetch method GET
 }
 
 async function getRoles() {
   return await instance.get("users/roles");
-  // https://prefertile-intergradational-elane.ngrok-free.dev/users/roles; fetch method GET
+  // http://localhost:3000/users/roles; fetch method GET
 }
 
 export { getUsers, createUser, updateUser, deleteUser, getUserById, getRoles };

@@ -12,7 +12,7 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
-import { UPLOAD_BASE } from "../../constant";
+import { UPLOAD_BASE } from "../../utils/constant.js";
 
 
 export default function Gallerie() {

@@ -104,7 +104,7 @@ const { data: recentVideos, isLoading: videosLoading } = useQuery({
                <div className="aspect-video bg-black relative">
   {video.thumbnail ? (
     <img 
-      src={`http://localhost:3000/${video.thumbnail}`}   
+      src={`https://front-rho-five-97.vercel.app/${video.thumbnail}`}   
       alt={video.title || "Vidéo"}
       className="w-full h-full object-cover"
       onError={(e) => {

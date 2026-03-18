@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "https://prefertile-intergradational-elane.ngrok-free.dev",
+  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000",
   timeout: 10000,
   headers: {
     'ngrok-skip-browser-warning': 'true'

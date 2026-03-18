@@ -9,4 +9,5 @@
  *   VITE_UPLOAD_BASE=https://mondomaine.com/uploads
  */
 export const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:3000";
-export const UPLOAD_BASE = import.meta.env.VITE_UPLOAD_BASE || `${API_BASE}/uploads`;
+export const UPLOAD_BASE =
+  import.meta.env.VITE_UPLOAD_BASE || `${API_BASE}/uploads`;

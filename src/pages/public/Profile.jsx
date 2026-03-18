@@ -9,7 +9,6 @@ import * as z from 'zod';
 import { useState } from 'react';
 import { Pencil } from 'lucide-react';
 import { useEffect } from 'react';
-import { UPLOAD_BASE } from '../constants';
 
 const profileSchema = z.object({
   first_name: z.string().min(1, "Le prénom est requis"),
@@ -105,7 +104,7 @@ const { data: recentVideos, isLoading: videosLoading } = useQuery({
                <div className="aspect-video bg-black relative">
   {video.thumbnail ? (
     <img 
-      src={`${UPLOAD_BASE}/${video.thumbnail}`}
+      src={`http://localhost:3000/${video.thumbnail}`}   
       alt={video.title || "Vidéo"}
       className="w-full h-full object-cover"
       onError={(e) => {

@@ -29,7 +29,7 @@ export default function Gallerie() {
     keepPreviousData: true,
   });
 
-  const UPLOADS_BASE = "http://localhost:3000/";
+  const UPLOADS_BASE = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
   const toFilmCardShape = (video) => {
     const thumb = video?.thumbnail

@@ -35,8 +35,8 @@ export default function Gallerie() {
 
  const toFilmCardShape = (video) => {
   const thumb = video?.thumbnail
-    ? `${UPLOAD_BASE}/${video.thumbnail}`               // ← ici
-    : `${UPLOAD_BASE}/thumbnail-placeholder.png`;       // ← et ici
+    ? `${UPLOAD_BASE}/upload/images/${video.thumbnail}`               // ← ici
+    : `${UPLOAD_BASE}/upload/images/thumbnail-placeholder.png`;       // ← et ici
 
   // Optionnel : nettoyer les slashs en trop si ta BDD en met parfois
   // const cleanThumb = thumb.replace(/\/{2,}/g, '/');

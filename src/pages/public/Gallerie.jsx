@@ -12,6 +12,8 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui/pagination";
+import { UPLOAD_BASE } from "../../utils/constant.js";
+
 
 export default function Gallerie() {
   const navigate = useNavigate();
@@ -29,33 +31,36 @@ export default function Gallerie() {
     keepPreviousData: true,
   });
 
-  const UPLOADS_BASE = "http://localhost:3000/";
+  // const UPLOADS_BASE = "http://localhost:3000/";
 
-  const toFilmCardShape = (video) => {
-    const thumb = video?.thumbnail
-      ? `${UPLOADS_BASE}/${video.thumbnail}`
-      : `${UPLOADS_BASE}/thumbnail-placeholder.png`;
+ const toFilmCardShape = (video) => {
+  const thumb = video?.thumbnail
+    ? `${UPLOAD_BASE}/${video.thumbnail}`               // ← ici
+    : `${UPLOAD_BASE}/thumbnail-placeholder.png`;       // ← et ici
 
-    const youtubeIdOrUrl = (video?.youtube_link ?? "") || (video?.youtube_video_id ?? "");
-    const youtubeUrl =
-      youtubeIdOrUrl && !String(youtubeIdOrUrl).startsWith("http")
-        ? `https://www.youtube.com/watch?v=${youtubeIdOrUrl}`
-        : youtubeIdOrUrl;
+  // Optionnel : nettoyer les slashs en trop si ta BDD en met parfois
+  // const cleanThumb = thumb.replace(/\/{2,}/g, '/');
 
-    return {
-      id: video?.id,
-      title: video?.title,
-      translated_title: video?.translated_title ?? "",
-      duration: video?.duration ?? "",
-      synopsis: video?.synopsis ?? "",
-      status: video?.status ?? "",
-      ai_tools: video?.ai_tools ?? "",
-      youtube_link: youtubeUrl,
-      thumbnail: thumb,
-      image_2: "",
-      image_3: "",
-    };
+  const youtubeIdOrUrl = (video?.youtube_link ?? "") || (video?.youtube_video_id ?? "");
+  const youtubeUrl =
+    youtubeIdOrUrl && !String(youtubeIdOrUrl).startsWith("http")
+      ? `https://www.youtube.com/watch?v=${youtubeIdOrUrl}`
+      : youtubeIdOrUrl;
+
+  return {
+    id: video?.id,
+    title: video?.title,
+    translated_title: video?.translated_title ?? "",
+    duration: video?.duration ?? "",
+    synopsis: video?.synopsis ?? "",
+    status: video?.status ?? "",
+    ai_tools: video?.ai_tools ?? "",
+    youtube_link: youtubeUrl,
+    thumbnail: thumb,
+    image_2: "",   // ← tu pourras faire pareil plus tard si besoin
+    image_3: "",
   };
+};
 
   const Shell = ({ children }) => (
     <div className="min-h-screen bg-black text-white font-sans">
